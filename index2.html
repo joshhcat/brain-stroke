@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brain Stroke Prediction</title>
+
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+}
+
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.prediction-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.prediction-card h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.prediction-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.label {
+    color: #555;
+}
+
+.value {
+    font-weight: bold;
+    color: #007bff;
+}
+
+
+    </style>
+    <div class="container">
+        <h1>Brain Stroke Prediction Form</h1>
+        <form id="prediction-form">
+            <label>Gender:</label>
+            <select name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>Hypertension (0 or 1):</label>
+            <input type="number" name="hypertension" min="0" max="1" required>
+
+            <label>Heart Disease (0 or 1):</label>
+            <input type="number" name="heart_disease" min="0" max="1" required>
+
+            <label>Ever Married:</label>
+            <select name="ever_married" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Work Type:</label>
+            <select name="work_type" required>
+                <option value="Private">Private</option>
+                <option value="Self-employed">Self-employed</option>
+                <option value="Govt_job">Govt_job</option>
+                <option value="children">Children</option>
+                <option value="Never_worked">Never worked</option>
+            </select>
+
+            <label>Residence Type:</label>
+            <select name="Residence_type" required>
+                <option value="Urban">Urban</option>
+                <option value="Rural">Rural</option>
+            </select>
+
+            <label>Average Glucose Level:</label>
+            <input type="number" step="0.1" name="avg_glucose_level" required>
+
+            <label>BMI:</label>
+            <input type="number" step="0.1" name="bmi" required>
+
+            <label>Smoking Status:</label>
+            <select name="smoking_status" required>
+                <option value="formerly smoked">Formerly Smoked</option>
+                <option value="never smoked">Never Smoked</option>
+                <option value="smokes">Smokes</option>
+                <option value="Unknown">Unknown</option>
+            </select>
+
+            <button type="submit">Predict Stroke</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="main3.js"></script>
+</body>
+</html>
+    
